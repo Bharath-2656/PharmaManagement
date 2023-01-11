@@ -291,3 +291,7 @@
 /Users/Bharath/Projects/pharmaManagement/pharmaManagement/obj/Debug/net6.0/pharmaManagement.pdb
 /Users/Bharath/Projects/pharmaManagement/pharmaManagement/obj/Debug/net6.0/pharmaManagement.genruntimeconfig.cache
 /Users/Bharath/Projects/pharmaManagement/pharmaManagement/obj/Debug/net6.0/ref/pharmaManagement.dll
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/Microsoft.AspNetCore.Server.Kestrel.Https.dll
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/BCrypt.Net-Next.dll
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

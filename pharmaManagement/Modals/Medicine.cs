@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace pharmaManagement.Modals
 {
     public class Medicine

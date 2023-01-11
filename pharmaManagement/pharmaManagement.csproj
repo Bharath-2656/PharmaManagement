@@ -18,6 +18,9 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,9 +32,20 @@
     <None Remove="Pomelo.EntityFrameworkCore.MySql" />
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Migrations\" />
+    <None Remove="Microsoft.AspNetCore" />
+    <None Remove="Services\MedicineService\" />
+    <None Remove="Services\TokenManager\" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="BCrypt.Net-Next" />
+    <None Remove="Services\AdminService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Modals\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Services\MedicineService\" />
+    <Folder Include="Services\TokenManager\" />
+    <Folder Include="Services\AdminService\" />
   </ItemGroup>
 </Project>
