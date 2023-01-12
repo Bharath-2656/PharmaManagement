@@ -39,6 +39,9 @@
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="BCrypt.Net-Next" />
     <None Remove="Services\AdminService\" />
+    <None Remove="DTO\" />
+    <None Remove="ExceptionHandling\" />
+    <None Remove="Services\PatientService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -47,5 +50,8 @@
     <Folder Include="Services\MedicineService\" />
     <Folder Include="Services\TokenManager\" />
     <Folder Include="Services\AdminService\" />
+    <Folder Include="DTO\" />
+    <Folder Include="ExceptionHandling\" />
+    <Folder Include="Services\PatientService\" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,9 @@
 using System.Text;
 using FirstWebApplication.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Abstractions;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using pharmaManagement.Services;
@@ -48,6 +51,26 @@ builder.Services.AddAuthentication(
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["JWT:Issuer"],
             IssuerSigningKey = new SymmetricSecurityKey(key)
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnChallenge = async context =>
+            {
+                // Call this to skip the default logic and avoid using the default response
+                context.HandleResponse();
+
+                var httpContext = context.HttpContext;
+                var statusCode = StatusCodes.Status401Unauthorized;
+
+                var routeData = httpContext.GetRouteData();
+                var actionContext = new ActionContext(httpContext, routeData, new ActionDescriptor());
+
+                var factory = httpContext.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+                var problemDetails = factory.CreateProblemDetails(httpContext, statusCode);
+
+                var result = new ObjectResult(problemDetails) { StatusCode = statusCode };
+                await result.ExecuteResultAsync(actionContext);
+            }
         };
 
     });

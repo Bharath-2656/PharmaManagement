@@ -14,5 +14,9 @@ namespace FirstWebApplication.Controllers
         public DbSet<Medicine> Medicines { get; set; }
 
         public DbSet<Admin> Admins { get; set; }
+
+        public DbSet<Patient> Patients { get; set; }
+
+        public DbSet<PatientRecord> PatientRecords { get; set; }
     }
 }

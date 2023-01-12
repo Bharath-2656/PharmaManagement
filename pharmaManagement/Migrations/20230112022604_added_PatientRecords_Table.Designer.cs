@@ -3,6 +3,7 @@ using System;
 using FirstWebApplication.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace pharmaManagement.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class MedicineDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230112022604_added_PatientRecords_Table")]
+    partial class added_PatientRecords_Table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

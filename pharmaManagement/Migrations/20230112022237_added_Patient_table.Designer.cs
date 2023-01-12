@@ -3,6 +3,7 @@ using System;
 using FirstWebApplication.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace pharmaManagement.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class MedicineDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230112022237_added_Patient_table")]
+    partial class added_Patient_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,49 +106,6 @@ namespace pharmaManagement.Migrations
                     b.HasKey("patientId");
 
                     b.ToTable("Patients");
-                });
-
-            modelBuilder.Entity("pharmaManagement.Modals.PatientRecord", b =>
-                {
-                    b.Property<int>("RecordId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("count")
-                        .HasColumnType("int");
-
-                    b.Property<int>("medicineId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("patientId")
-                        .HasColumnType("int");
-
-                    b.HasKey("RecordId");
-
-                    b.HasIndex("medicineId");
-
-                    b.HasIndex("patientId");
-
-                    b.ToTable("PatientRecords");
-                });
-
-            modelBuilder.Entity("pharmaManagement.Modals.PatientRecord", b =>
-                {
-                    b.HasOne("pharmaManagement.Modals.Medicine", "Medicine")
-                        .WithMany()
-                        .HasForeignKey("medicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("pharmaManagement.Modals.Patient", "Patient")
-                        .WithMany()
-                        .HasForeignKey("patientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Medicine");
-
-                    b.Navigation("Patient");
                 });
 #pragma warning restore 612, 618
         }

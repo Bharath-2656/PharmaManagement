@@ -3,6 +3,7 @@ using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using pharmaManagement.Modals;
 using pharmaManagement.Services;
+using System.Net;
 
 namespace FirstWebApplication.Controllers
 {
@@ -20,6 +21,7 @@ namespace FirstWebApplication.Controllers
 
         //Get all Medicines
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         [Route("Medicine/GetAllMedicines")]
         public async Task<List<Medicine>> GetAllMedicinesAsync()
         {
@@ -27,28 +29,38 @@ namespace FirstWebApplication.Controllers
             return await _medicineService.GetAllAsync();
         }
 
-        ////Get Medicine name by id
-        //[HttpGet]
-        //[Route("Medicine/GetName")]
-        //public async Task<string> GetNameAsync(int Id)
-        //{
-        //    return await _medicineService.GetByIdAsync(Id);
-        //}
-
+    
         [Route("Medicine/GetMedicineById/{Id}")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
-        public async Task<Medicine> GetMedicineByIdAsync(int Id)
+        public async Task<IActionResult> GetMedicineByIdAsync(int Id)
         {
-            return await _medicineService.GetByIdAsync(Id);
+            Medicine medicine =  await _medicineService.GetByIdAsync(Id);
+            if(medicine== null)
+            {
+                return NotFound("No Medicine found");
+            }
+            else
+            {
+                return Ok(medicine);
+            }
 
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [Route("Medicine/PostMedicine")]
         public Medicine PostMedicine(Medicine Medicine)
         {
             _medicineService.CreateAsync(Medicine);
             return Medicine;
+        }
+
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<string> DeleteDoctor(int id)
+        {
+            return await _medicineService.DeleteById(id);
         }
     }
 

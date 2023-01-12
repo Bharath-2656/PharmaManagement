@@ -20,6 +20,7 @@ namespace pharmaManagement.Services.MedicineService
 
         public async Task<List<Medicine>> GetAllAsync()
         {
+
             if (_context.Medicines == null)
             {
                 return null;
