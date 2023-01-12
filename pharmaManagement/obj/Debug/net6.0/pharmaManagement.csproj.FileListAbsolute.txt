@@ -295,3 +295,14 @@
 /Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 /Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/BCrypt.Net-Next.dll
 /Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/alpine-arm/native/libe_sqlite3.so
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/alpine-arm64/native/libe_sqlite3.so
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/browser-wasm/nativeassets/net6.0/e_sqlite3.a
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/linux-musl-arm/native/libe_sqlite3.so
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/linux-musl-arm64/native/libe_sqlite3.so
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/runtimes/maccatalyst-x64/native/libe_sqlite3.dylib
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/obj/Debug/net6.0/pharmaManagement.RazorAssemblyInfo.cache
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/obj/Debug/net6.0/pharmaManagement.RazorAssemblyInfo.cs
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/AutoMapper.dll
+/Users/Bharath/Projects/pharmaManagement/pharmaManagement/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

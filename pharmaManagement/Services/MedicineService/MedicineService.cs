@@ -5,7 +5,7 @@ using System.Numerics;
 using FirstWebApplication.Controllers;
 using pharmaManagement.Modals;
 
-namespace pharmaManagement.Services.MedicineService
+namespace pharmaManagement.Services
 {
 	public class MedicineService: IMedicneService
 	{

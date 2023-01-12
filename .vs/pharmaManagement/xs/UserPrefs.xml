@@ -1,22 +1,31 @@
 ﻿<Properties StartupConfiguration="{7565884E-216A-41A5-964A-D2FB3F459375}|Default">
+  <MonoDevelop.Ide.ItemProperties.pharmaManagement PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="pharmaManagement/Controllers/MedicineController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="pharmaManagement/Program.cs">
     <Files>
-      <File FileName="pharmaManagement/appsettings.json" Line="10" Column="91" IsPinned="True" />
-      <File FileName="pharmaManagement/Modals/MedicineDBContext.cs" />
-      <File FileName="pharmaManagement/Program.cs" Line="7" Column="60" />
-      <File FileName="pharmaManagement/Modals/Medicine.cs" Line="11" Column="35" />
-      <File FileName="pharmaManagement/Controllers/HomeController.cs" Line="27" Column="36" />
-      <File FileName="../../.microsoft/usersecrets/5c1bcbda-4031-4d27-92a6-463dca177a1b/secrets.json" />
-      <File FileName="pharmaManagement/Migrations/20230106022234_Initial.cs" />
-      <File FileName="pharmaManagement/Properties/launchSettings.json" />
-      <File FileName="pharmaManagement/Services/MedicineService.cs" Line="59" Column="1" />
-      <File FileName="pharmaManagement/Services/IMedicneService.cs" Line="8" Column="19" />
+      <File FileName="pharmaManagement/Migrations/20230112022237_added_Patient_table.cs" Line="1" Column="1" />
+      <File FileName="pharmaManagement/Modals/PatientRecord.cs" Line="7" Column="28" />
+      <File FileName="pharmaManagement/Modals/AppDBContext.cs" Line="20" Column="63" />
+      <File FileName="pharmaManagement/Migrations/20230112022604_added_PatientRecords_Table.cs" Line="1" Column="1" />
+      <File FileName="pharmaManagement/DTO/MedicineDTO.cs" Line="12" Column="6" />
+      <File FileName="pharmaManagement/Modals/Login.cs" Line="1" Column="1" />
+      <File FileName="pharmaManagement/Modals/Patient.cs" Line="32" Column="12" />
+      <File FileName="pharmaManagement/Modals/Medicine.cs" Line="1" Column="1" />
+      <File FileName="pharmaManagement/Controllers/AdminController.cs" Line="57" Column="25" />
+      <File FileName="pharmaManagement/Controllers/MedicineController.cs" Line="69" Column="2" />
+      <File FileName="pharmaManagement/Controllers/PatientController.cs" Line="30" Column="34" />
+      <File FileName="pharmaManagement/Program.cs" Line="138" Column="1" />
+      <File FileName="pharmaManagement/Services/PatientService/PatientService.cs" Line="9" Column="36" />
+      <File FileName="pharmaManagement/Services/PatientService/IPatientService.cs" Line="19" Column="1" />
+      <File FileName="pharmaManagement/Services/MedicineService/MedicineService.cs" Line="8" Column="36" />
+      <File FileName="pharmaManagement/Services/MedicineService/IMedicneService.cs" Line="19" Column="1" />
+      <File FileName="pharmaManagement/appsettings.json" Line="1" Column="1" />
+      <File FileName="pharmaManagement/Services/TokenManager/IJWTTokenManager.cs" Line="3" Column="36" />
+      <File FileName="pharmaManagement/Services/TokenManager/JWTTokenManager.cs" Line="3" Column="1" />
+      <File FileName="pharmaManagement/Services/AdminService/AdminService.cs" Line="6" Column="36" />
+      <File FileName="pharmaManagement/Services/AdminService/IAdminService.cs" Line="5" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,17 +33,25 @@
           <Node name="pharmaManagement" expanded="True">
             <Node name="pharmaManagement" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="MedicineController.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="DTO" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Modals" expanded="True">
+                <Node name="Patient.cs" selected="True" />
               </Node>
-              <Node name="Modals" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="AdminService" expanded="True" />
+                <Node name="MedicineService" expanded="True" />
+                <Node name="PatientService" expanded="True" />
+                <Node name="TokenManager" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.pharmaManagement PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

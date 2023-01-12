@@ -56,12 +56,13 @@ namespace FirstWebApplication.Controllers
             return Medicine;
         }
 
-        [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<string> DeleteDoctor(int id)
-        {
-            return await _medicineService.DeleteById(id);
-        }
+        //[HttpDelete("{id}")]
+        //[Authorize(Roles = "Admin")]
+        //[Route("Medicine/delete/{id}")]
+        //public async Task<string> DeleteDoctor(int id)
+        //{
+        //    return await _medicineService.DeleteById(id);
+        //}
     }
 
 

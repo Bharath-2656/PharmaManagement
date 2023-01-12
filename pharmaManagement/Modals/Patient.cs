@@ -20,6 +20,16 @@ namespace pharmaManagement.Modals
         [Required]
         [MaxLength(150)]
         public string Address { get; set; }
+
+        //public static implicit operator Patient(Medicine v)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public static implicit operator Patient(List<Patient> v)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
 

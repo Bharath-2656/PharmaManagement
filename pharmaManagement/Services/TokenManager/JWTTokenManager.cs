@@ -1,12 +1,11 @@
 ﻿using System;
 using Microsoft.IdentityModel.Tokens;
-using pharmaManagement.Services.TokenManager;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using pharmaManagement.Modals;
 
-namespace pharmaManagement.Services.TokenManager
+namespace pharmaManagement.Services
 {
 
     public class JWTTokenManager : IJWTTokenManager

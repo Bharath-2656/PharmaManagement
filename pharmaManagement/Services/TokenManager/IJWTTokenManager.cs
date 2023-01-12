@@ -1,6 +1,6 @@
 ﻿using System;
 using pharmaManagement.Modals;
-namespace pharmaManagement.Services.TokenManager
+namespace pharmaManagement.Services
 {
 	public interface IJWTTokenManager
 	{

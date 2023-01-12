@@ -3,7 +3,7 @@ using FirstWebApplication.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using pharmaManagement.Modals;
 
-namespace pharmaManagement.Services.AdminService
+namespace pharmaManagement.Services
 {
     public class AdminService : IAdminService
     {

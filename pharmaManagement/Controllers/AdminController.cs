@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Plugins;
 using pharmaManagement.Modals;
-using pharmaManagement.Services.AdminService;
-using pharmaManagement.Services.TokenManager;
+using pharmaManagement.Services;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
