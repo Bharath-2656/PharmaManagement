@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using pharmaManagement.Modals;
 using pharmaManagement.Services;
 
 
@@ -17,6 +18,7 @@ builder.Services.AddScoped<IMedicneService, MedicineService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IPatientRecordService, PatientRecordService>();
 
 builder.Services.AddScoped<IJWTTokenManager, JWTTokenManager>();
 

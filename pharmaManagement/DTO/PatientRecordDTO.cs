@@ -1,17 +1,12 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace pharmaManagement.Modals
+namespace pharmaManagement.DTO
 {
-	public class PatientRecord
+	public class PatientRecordDTO
 	{
-        [Required]
-        [Key]
         public int RecordId { get; set; }
-        [ForeignKey("patientId")]
         public int patientId { get; set; }
-        [ForeignKey("medicineId")]
         public int medicineId { get; set; }
         public int count { get; set; }
     }

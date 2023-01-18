@@ -5,6 +5,8 @@ using System.Numerics;
 using FirstWebApplication.Controllers;
 using pharmaManagement.Modals;
 using pharmaManagement.Controllers;
+using pharmaManagement.DTO;
+using AutoMapper;
 
 namespace pharmaManagement.Services
 {
@@ -12,21 +14,25 @@ namespace pharmaManagement.Services
     {
         private readonly AppDBContext _context;
         private readonly ILogger<PatientController> _logger;
+        private readonly PatientDTO patientDTO;
+        IMapper _mapper;
+        ModelFactory _modelFactory;
 
         public PatientService(AppDBContext context, ILogger<PatientController> logger)
         {
             _context = context;
             _logger = logger;
+            
         }
 
-        public async Task<List<Patient>> GetAllAsync()
+        public IEnumerable<PatientDTO> GetAllAsync()
         {
 
             if (_context.Patients == null)
             {
                 return null;
             }
-            var patients = await _context.Patients.ToListAsync();
+            var patients = _context.Patients.ToList().Select(c => _modelFactory.Create(c));
             return patients;
         }
 
@@ -54,13 +60,14 @@ namespace pharmaManagement.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<ActionResult<Patient>?> CreateAsync(Patient patient)
+        public async Task<ActionResult<Patient>?> CreateAsync(PatientDTO patient)
         {
             if (_context.Patients == null)
             {
                 return null;
             }
-            _context.Patients.Add(patient);
+            var patient1 = _mapper.Map<Patient>(patient);
+            _context.Patients.Add(patient1);
             await _context.SaveChangesAsync();
             return await GetByIdAsync(patient.patientId);
         }

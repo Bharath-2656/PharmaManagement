@@ -44,6 +44,7 @@
     <None Remove="Services\PatientService\" />
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Mapper\" />
+    <None Remove="Services\PatientRecordService\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -55,5 +56,6 @@
     <Folder Include="DTO\" />
     <Folder Include="Services\PatientService\" />
     <Folder Include="Mapper\" />
+    <Folder Include="Services\PatientRecordService\" />
   </ItemGroup>
 </Project>

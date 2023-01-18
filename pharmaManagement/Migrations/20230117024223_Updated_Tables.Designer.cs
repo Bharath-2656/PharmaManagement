@@ -3,6 +3,7 @@ using System;
 using FirstWebApplication.Controllers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace pharmaManagement.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class MedicineDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230117024223_Updated_Tables")]
+    partial class Updated_Tables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,7 +125,40 @@ namespace pharmaManagement.Migrations
 
                     b.HasKey("RecordId");
 
+                    b.HasIndex("medicineId");
+
+                    b.HasIndex("patientId");
+
                     b.ToTable("PatientRecords");
+                });
+
+            modelBuilder.Entity("pharmaManagement.Modals.PatientRecord", b =>
+                {
+                    b.HasOne("pharmaManagement.Modals.Medicine", "Medicine")
+                        .WithMany("PatientRecord")
+                        .HasForeignKey("medicineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("pharmaManagement.Modals.Patient", "Patients")
+                        .WithMany("PatientRecord")
+                        .HasForeignKey("patientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Medicine");
+
+                    b.Navigation("Patients");
+                });
+
+            modelBuilder.Entity("pharmaManagement.Modals.Medicine", b =>
+                {
+                    b.Navigation("PatientRecord");
+                });
+
+            modelBuilder.Entity("pharmaManagement.Modals.Patient", b =>
+                {
+                    b.Navigation("PatientRecord");
                 });
 #pragma warning restore 612, 618
         }

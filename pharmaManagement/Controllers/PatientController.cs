@@ -6,6 +6,7 @@ using pharmaManagement.Services;
 using System.Net;
 using pharmaManagement.DTO;
 using AutoMapper;
+using System;
 
 namespace FirstWebApplication.Controllers
 {
@@ -27,17 +28,17 @@ namespace FirstWebApplication.Controllers
         [HttpGet]
         [Authorize(Roles = "Admin")]
         [Route("Patient/GetAllPatients")]
-        public async Task<IActionResult> GetAllPatientsAsync()
+        public IEnumerable<PatientDTO> GetAllPatientsAsync()
         {
 
-           List<Patient> patient =  await _patientService.GetAllAsync();
-            if(patient.Count == 0)
+           IEnumerable<PatientDTO> patient =  _patientService.GetAllAsync();
+            //if(patient.Count == 0)
+            //{
+            //    return NotFound("No Patient found");
+            //}
+            //else
             {
-                return NotFound("No Patient found");
-            }
-            else
-            {
-                return Ok(_mapper.Map<IEnumerable<PatientDTO>>(patient));
+                return patient;
             }
         }
 
@@ -54,7 +55,7 @@ namespace FirstWebApplication.Controllers
             }
             else
             {
-                return Ok(patient);
+                return Ok(_mapper.Map<IEnumerable<PatientDTO>>(patient));
             }
 
         }
@@ -62,10 +63,11 @@ namespace FirstWebApplication.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin")]
         [Route("Patient/PostPatient")]
-        public Patient PostPatient(Patient Patient)
+        public IActionResult PostPatient(PatientDTO patient)
         {
-            _patientService.CreateAsync(Patient);
-            return Patient;
+            _patientService.CreateAsync(patient);
+
+            return Ok(_mapper.Map<IEnumerable<PatientDTO>>(patient));
         }
 
         //[HttpDelete("{id}")]

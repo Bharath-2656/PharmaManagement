@@ -11,14 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace pharmaManagement.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20230112022604_added_PatientRecords_Table")]
-    partial class added_PatientRecords_Table
+    [Migration("20230118143132_updated_table")]
+    partial class updated_table
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.11")
+                .HasAnnotation("ProductVersion", "6.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("pharmaManagement.Modals.Admin", b =>
@@ -125,30 +125,7 @@ namespace pharmaManagement.Migrations
 
                     b.HasKey("RecordId");
 
-                    b.HasIndex("medicineId");
-
-                    b.HasIndex("patientId");
-
                     b.ToTable("PatientRecords");
-                });
-
-            modelBuilder.Entity("pharmaManagement.Modals.PatientRecord", b =>
-                {
-                    b.HasOne("pharmaManagement.Modals.Medicine", "Medicine")
-                        .WithMany()
-                        .HasForeignKey("medicineId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("pharmaManagement.Modals.Patient", "Patient")
-                        .WithMany()
-                        .HasForeignKey("patientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Medicine");
-
-                    b.Navigation("Patient");
                 });
 #pragma warning restore 612, 618
         }
