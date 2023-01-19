@@ -1,0 +1,19 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Patient/GetAllPatients",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7037
+        }
+      ],
+      "UpstreamPathTemplate": "/api/patient",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7298"
+  }
+}

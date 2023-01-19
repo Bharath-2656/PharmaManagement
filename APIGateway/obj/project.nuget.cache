@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "BmdFkooq6pyhUJQ33F8ihHxHmvA7sEVmhymRDpzYOQ9E8n1KEnOnFlVK9jL8cWVRpSUJo1fHUIDPUih+7RTIrQ==",
+  "success": true,
+  "projectFilePath": "/Users/Bharath/Projects/Pharma/APIGateway/APIGateway.csproj",
+  "expectedPackageFiles": [
+    "/Users/Bharath/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/microsoft.aspnetcore.jsonpatch/6.0.1/microsoft.aspnetcore.jsonpatch.6.0.1.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/microsoft.aspnetcore.middlewareanalysis/6.0.1/microsoft.aspnetcore.middlewareanalysis.6.0.1.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/6.0.1/microsoft.aspnetcore.mvc.newtonsoftjson.6.0.1.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/microsoft.extensions.diagnosticadapter/3.1.22/microsoft.extensions.diagnosticadapter.3.1.22.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/ocelot/18.0.0/ocelot.18.0.0.nupkg.sha512",
+    "/Users/Bharath/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
